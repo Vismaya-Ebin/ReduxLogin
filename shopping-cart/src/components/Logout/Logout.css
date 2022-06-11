@@ -1,0 +1,26 @@
+.logout{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    background-color:black;
+     
+}
+.container{
+    display:flex;
+    flex-direction:column;
+}
+span{
+    color:green;
+    font-size:2rem;
+}
+
+h2{
+    color:yellowgreen;
+}
+button{
+    color:red;
+    background-color:yellow;
+    font-size:2rem;
+    font-weight:bold
+}
