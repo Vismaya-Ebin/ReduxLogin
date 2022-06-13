@@ -3,24 +3,33 @@
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-between;
-    background-color:black;
+    background-color:#3b5998;
      
 }
 .container{
     display:flex;
     flex-direction:column;
+    flex-wrap: wrap;
 }
-span{
-    color:green;
+
+h2,span{
+    color:white;
     font-size:2rem;
 }
 
-h2{
-    color:yellowgreen;
+
+h1{
+    color:#3b5998;
 }
 button{
-    color:red;
-    background-color:yellow;
+    color:white;
+    background-color:#3b5998;
     font-size:2rem;
     font-weight:bold
+}
+.nav-bar{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
 }

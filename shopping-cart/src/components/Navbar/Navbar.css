@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.navbar a{
+    text-decoration: none;
+    color:black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav-bag{
+    color:black;
+    
+}
+.cart-item{
+    color:yellow;
+}

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
 import { login } from "./../../components/features/userSlice";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [details,setDetails] = useState({username: username, email: email, password: password});
+  // const [username, setUsername] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const [details,setDetails] = useState({username: "", email: "", password: ""});
   
 
   const dispatch = useDispatch();
@@ -39,39 +41,43 @@ export default function Login() {
     <div className="login">
       <form className="login-form" onSubmit={(e) => handleSubmit(e)}>
         <h1>Login Here </h1>
-        <input
+        <TextField
           type="text"
           placeholder="Name"
           value={details.username}
           id="username"
           name="username"
+          className="textField"
           onChange={handleChange}
           required
         />
         <br />
-        <input
+        <TextField
           type="email"
           placeholder="Email"
           value={details.email}
           id="email"
           name="email"
+          className="textField"
           onChange={handleChange}
           required
         />
         <br />
-        <input
+        <TextField
           type="password"
           placeholder="Password"
           value={details.password}
           id="password"
           name="password"
+          className="textField"
           onChange={handleChange}
           required
         />
         <br />
-        <button type="submit" className="submitBtn">
+        {/* <button type="submit" className="submitBtn">
           Submit
-        </button>
+        </button> */}
+        <Button variant="contained" type="submit" className="submitBtn" size="large">Submit</Button>
       </form>
     </div>
   );
