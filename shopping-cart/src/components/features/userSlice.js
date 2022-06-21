@@ -1,4 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
+// A SLICE IS THE COMBINATION OF REDUCERS AND ACTIONS
+// A SLICE IS A () WHERE WE CAN PASS ARGUMENTS
 
 export const userSlice = createSlice({
   //name of the store  is user

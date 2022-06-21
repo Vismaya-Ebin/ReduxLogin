@@ -7,6 +7,7 @@ import "./Logout.css";
 import Navbar from "../Navbar/Navbar";
 
 export default function Welcome() {
+  console.log('Logout');
   const user = useSelector(loginSelector);
   const dispatch = useDispatch();
   const handleLogOut = (e) => {
