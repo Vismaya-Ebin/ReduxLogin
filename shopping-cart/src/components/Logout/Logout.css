@@ -4,6 +4,7 @@
     flex-wrap:wrap;
     justify-content:space-between;
     background-color:#3b5998;
+    align-items: center;
      
 }
 .container{
@@ -12,24 +13,27 @@
     flex-wrap: wrap;
 }
 
-h2,span{
+.spanClass{
     color:white;
-    font-size:2rem;
+    font-size:1.2rem;
+    background-color:#3b5998;
+    border:none;
 }
-
+button{
+    background-color:#3b5998;
+}
 
 h1{
     color:#3b5998;
 }
-button{
-    color:white;
-    background-color:#3b5998;
-    font-size:2rem;
-    font-weight:bold
-}
+
 .nav-bar{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
 
+}
+.logoutBtn{
+    color:white;
+    border:none;
 }

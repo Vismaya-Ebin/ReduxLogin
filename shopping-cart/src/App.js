@@ -1,6 +1,6 @@
 import "./App.css";
 import Login from "./components/Login/Login";
-import { loginSelector } from "./components/features/userSlice";
+import { loginSelector } from "./components/Redux/userSlice";
 import { useSelector } from "react-redux";
 import Logout from "./components/Logout/Logout";
 import {Routes,Route} from 'react-router-dom';
@@ -15,6 +15,7 @@ function App() {
   return <div className="App">
   
     <Routes>
+    {/* <Route path="/"  exact element={ <Logout />}/> */}
     <Route path="/"  exact element= {user && user.username && user.password && user.email? <Logout /> : <Login />}/>
     <Route path="/home" element={<Home/>}/>
     <Route path="/cart" element={<Cart/>}/>

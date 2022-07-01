@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useDispatch } from "react-redux";
-import { login } from "./../../components/features/userSlice";
+import { login } from "../Redux/userSlice";
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import Button from "@material-ui/core/Button";
 
 export default function Login() {
   console.log('Login');
-  // const [username, setUsername] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  
   const [details,setDetails] = useState({username: "", email: "", password: ""});
   
 
@@ -52,7 +51,7 @@ export default function Login() {
           onChange={handleChange}
           required
         />
-        <br />
+        <br/><br/>
         <TextField
           type="email"
           placeholder="Email"
@@ -63,7 +62,7 @@ export default function Login() {
           onChange={handleChange}
           required
         />
-        <br />
+        <br/><br/>
         <TextField
           type="password"
           placeholder="Password"
@@ -74,11 +73,13 @@ export default function Login() {
           onChange={handleChange}
           required
         />
-        <br />
+        <br/>
+        <br/>
         {/* <button type="submit" className="submitBtn">
           Submit
         </button> */}
         <Button variant="contained" type="submit" className="submitBtn" size="large">Submit</Button>
+        
       </form>
     </div>
   );

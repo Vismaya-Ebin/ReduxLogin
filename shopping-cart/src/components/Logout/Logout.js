@@ -1,10 +1,11 @@
 import React from "react";
-import { loginSelector } from "../features/userSlice";
+import { loginSelector } from "../Redux/userSlice";
 import { useDispatch } from "react-redux";
-import { logout } from "./../../components/features/userSlice";
+import { logout } from "../Redux/userSlice";
 import { useSelector } from "react-redux";
 import "./Logout.css";
 import Navbar from "../Navbar/Navbar";
+import Product from "../Product/Product";
 
 export default function Welcome() {
   console.log('Logout');
@@ -17,16 +18,19 @@ export default function Welcome() {
 
   console.log("USER", user);
   return (
+    <>
     <div className="container">
       <div className="logout">
-        <h2>
-          Welcome <span>{user.username}</span>
-        </h2>
-        <button onClick={(e) => handleLogOut(e)}>LogOut</button>
+        
+           <span className="spanClass"> Welcome {user.username} to Online Shopping</span>
+        
+        <button className="logoutBtn" onClick={(e) => handleLogOut(e)}>LogOut</button>
         <br />
+        <Navbar />
       
       </div>
-      <Navbar />
+      <Product/>
     </div>
+    </>
   );
 }
