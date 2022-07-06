@@ -1,14 +1,14 @@
 import { createSlice , createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+// To fetch data from API in redux we will use createAsyncThunk
 export const productFetch = createAsyncThunk('product/fetch', 
-async({rejectWithValue})=>{
+async()=>{
     try{
     const response = await axios.get('http://localhost:5000/products')
     return response?.data;
     }
     catch(error){
-         return rejectWithValue("An error occured")
+        throw new Error("Error Occured");
     }
 })
 

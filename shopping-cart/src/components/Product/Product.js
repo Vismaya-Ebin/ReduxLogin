@@ -7,7 +7,7 @@ const Product = () => {
     console.log("products",products);
     return (
         <div className="product-container">
-            {products.map(product =>(<div>
+            {products && products.map(product =>(<div key={product.id}>
                 {product.name}
                 {product.price}
                 <img src={product.image} className="img-responsive"/>
